@@ -17,7 +17,7 @@ function calcularSaque(valorSaque) {
   for (i = 0; i < notas.length; i++) {
     if (valor >= notas[i]) {
       qtdNotas = parseInt(valor / notas[i]) + " nota(s) de " + notas[i] + "\n";
-      document.querySelector("#resultado").innerHTML += (qtdNotas);
+      document.querySelector("#resultado").innerHTML += qtdNotas;
       valor = valor % notas[i];
     }
   }
