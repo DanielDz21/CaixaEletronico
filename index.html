@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Caixa Eletrônico</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/>
+        <script src="https://kit.fontawesome.com/e28ad6f9e8.js" crossorigin="anonymous"></script>
+        <script src="script/script.js"></script>
+    </head>
+    <body>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="">
+                    <img src="img/asseinfo.png" width="112" height="28">
+                </a>
+            </div>
+          
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        <span>
+                            <i class="fa-brands fa-readme" href=""></i>
+                            Readme do Projeto
+                        </span>
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item" href="https://www.linkedin.com/in/daniel-da-silva-dev/" target="_BLANK">
+                        <span class="icon is-medium has-text-info">
+                            <i class="fa-brands fa-linkedin fa-2xl"></i>
+                        </span>
+                    </a>
+                    <a class="navbar-item" href="https://github.com/DanielDz21" target="_BLANK">
+                        <span class="icon is-medium">
+                            <i class="fa-brands fa-github-square fa-2xl"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="section">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <form class="box">
+                        <div class="field">
+                            <label class="label">Insira o Valor do Saque</label>
+                            <div class="control">
+                                <input class="input is-warning" type="number" placeholder="100" min="1" step="1" name="valorSaque"/>
+                                <p class="help is-danger" id="erro"></p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Notas a Receber</label>
+                            <div class="control">
+                                <textarea class="textarea is-warning" placeholder="" id="resultado" readonly></textarea>
+                            </div>
+                        </div>
+                        <button class="button is-warning" onclick="calcularSaque(valorSaque.value)">Sacar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
