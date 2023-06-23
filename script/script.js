@@ -16,8 +16,10 @@ function calcularSaque(valorSaque) {
   //Para cada nota, subtrai do valor o máximo de vezes possível
   for (i = 0; i < notas.length; i++) {
     if (valor >= notas[i]) {
-      qtdNotas = parseInt(valor / notas[i]) + " nota(s) de " + notas[i] + "\n";
-      document.querySelector("#resultado").innerHTML += qtdNotas;
+      qtdNotas = parseInt(valor / notas[i]);
+      pluralize = qtdNotas > 1 ? "s" : "";
+      message = `${qtdNotas} nota${pluralize} de R$${notas[i]}\n`;
+      document.querySelector("#resultado").innerHTML += message;
       valor = valor % notas[i];
     }
   }
